@@ -1,0 +1,1 @@
+struct Triangulo nuevoTriangulo(void);

@@ -1,0 +1,1 @@
+double distanciaEntre2Puntos(struct Punto, struct Punto);

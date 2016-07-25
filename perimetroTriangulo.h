@@ -1,0 +1,1 @@
+double perimetroTriangulo(struct Triangulo);
