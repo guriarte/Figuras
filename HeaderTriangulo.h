@@ -1,10 +1,10 @@
-struct Triangulo nuevoTriangulo(void);
+#include "HeaderPunto.h"
 
-struct Triangulo{
+struct Triangulo {
 
-    struct Punto trngA;
-    struct Punto trngB;
-    struct Punto trngC;
+    struct Punto verticeA;
+    struct Punto verticeB;
+    struct Punto verticeC;
 
     };
 

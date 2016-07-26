@@ -9,3 +9,4 @@ double distanciaEntre2Puntos(struct Punto puntoA, struct Punto puntoB){
 	     pow(puntoA.y - puntoB.y , 2)
 	    );
 }
+
