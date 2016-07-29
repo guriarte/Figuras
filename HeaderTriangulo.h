@@ -8,4 +8,5 @@ struct Triangulo {
 
     };
 
+Triangulo nuevoTriangulo();
 double perimetroTriangulo(struct Triangulo);

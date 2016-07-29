@@ -3,3 +3,5 @@ struct Circulo {
 };
 
 Circulo nuevoCirculo();
+double areaCirculo(Circulo );
+double perimetroCirculo(Circulo );

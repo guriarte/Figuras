@@ -14,3 +14,7 @@ Circulo nuevoCirculo(){
 double areaCirculo(Circulo circulo) {
     return (M_PI)*pow(circulo.radio, 2);
 }
+
+double perimetroCirculo(Circulo circulo) {
+    return 2*M_PI*circulo.radio;
+}
