@@ -6,9 +6,9 @@
 int main()
 {
     int eleccion;
-    Circulo figuraCirculo;
-    Triangulo figuraTriangulo;
 
+    while(1)
+    {
     std::cout << "Elegir una figura: " << std::endl;
     std::cout << "1 - Circulo." << std::endl;
     std::cout << "2 - Triangulo." << std::endl;
@@ -19,19 +19,32 @@ int main()
     switch(eleccion)
     {
         case 1:
-            figuraCirculo = nuevoCirculo();
-            break;
-
+            {
+                Circulo figuraCirculo;
+                figuraCirculo = nuevoCirculo();
+                imprimirAreaCirculo(areaCirculo(figuraCirculo));
+                imprimirPerimetroCirculo(perimetroCirculo(figuraCirculo));
+                break;
+            }
         case 2:
-            figuraTriangulo = nuevoTriangulo();
-            break;
-
+            {
+                Triangulo figuraTriangulo;
+                figuraTriangulo = nuevoTriangulo();
+                imprimirAreaTriangulo(areaTriangulo(figuraTriangulo));
+                imprimirPerimetroTriangulo(perimetroTriangulo(figuraTriangulo));
+                break;
+            }
         case 3:
-            //nuevoRectangulo();
-            break;
-
+            {
+                Rectangulo figuraRectangulo;
+                figuraRectangulo = nuevoRectangulo();
+                imprimirAreaRectangulo(areaRectangulo(figuraRectangulo));
+                imprimirPerimetroRectangulo(perimetroRectangulo(figuraRectangulo));
+                break;
+            }
         default:
             std::cout << "Invalido. Elija nuevamente." << std::endl;
             break;
+    }
     }
 }

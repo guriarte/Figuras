@@ -1,5 +1,6 @@
 #include "HeaderTriangulo.h"
 #include <iostream>
+#include <math.h>
 
 Triangulo nuevoTriangulo(){
   Triangulo nuevo;
@@ -17,4 +18,25 @@ double perimetroTriangulo(struct Triangulo triangulo){
 	return distanciaEntre2Puntos(triangulo.verticeA, triangulo.verticeB) +
 		distanciaEntre2Puntos(triangulo.verticeA, triangulo.verticeC) +
 		distanciaEntre2Puntos(triangulo.verticeB, triangulo.verticeC);
+}
+
+double areaTriangulo(struct Triangulo triangulo) {
+    double semiperimetro, ladoAB, ladoBC, ladoAC;
+
+    semiperimetro = perimetroTriangulo(triangulo)/2;
+    ladoAB = distanciaEntre2Puntos(triangulo.verticeA, triangulo.verticeB);
+    ladoBC = distanciaEntre2Puntos(triangulo.verticeB, triangulo.verticeC);
+    ladoAC = distanciaEntre2Puntos(triangulo.verticeA, triangulo.verticeC);
+
+    return sqrt(semiperimetro*(semiperimetro-ladoAB)*(semiperimetro-ladoBC)*(semiperimetro-ladoAC));//Fórmula de Herón
+}
+
+void imprimirAreaTriangulo(double area) {
+    std::cout << "El area del triangulo es " << area << "." << std::endl;
+    return;
+}
+
+void imprimirPerimetroTriangulo(double perimetro) {
+    std::cout << "El perimetro del triangulo es " << perimetro << "." << std::endl;
+    return;
 }

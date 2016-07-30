@@ -1,3 +1,6 @@
+#ifndef _TRIANGULOH_
+#define _TRIANGULOH_
+
 #include "HeaderPunto.h"
 
 struct Triangulo {
@@ -10,3 +13,9 @@ struct Triangulo {
 
 Triangulo nuevoTriangulo();
 double perimetroTriangulo(struct Triangulo);
+double areaTriangulo(struct Triangulo);
+
+void imprimirAreaTriangulo(double);
+void imprimirPerimetroTriangulo(double);
+
+#endif
