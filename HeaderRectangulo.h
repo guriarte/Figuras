@@ -2,6 +2,7 @@
 #define _RECTANGULOH_
 
 #include "HeaderPunto.h"
+#include "HeaderTriangulo.h"
 
 struct Rectangulo {
     struct Punto verticeIzquierdoSuperior;
@@ -15,5 +16,6 @@ double areaRectangulo(Rectangulo );
 double perimetroRectangulo(Rectangulo );
 void imprimirAreaRectangulo(double );
 void imprimirPerimetroRectangulo(double );
+bool esTriangulo(Triangulo );
 
 #endif

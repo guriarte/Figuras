@@ -30,6 +30,7 @@ int main()
             {
                 Triangulo figuraTriangulo;
                 figuraTriangulo = nuevoTriangulo();
+                if(!(esTriangulo(figuraTriangulo))) {std::cout << "No forma un triangulo. Elija nuevamente." << std::endl; break;}
                 imprimirAreaTriangulo(areaTriangulo(figuraTriangulo));
                 imprimirPerimetroTriangulo(perimetroTriangulo(figuraTriangulo));
                 break;

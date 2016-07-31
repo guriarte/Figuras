@@ -40,3 +40,17 @@ void imprimirPerimetroTriangulo(double perimetro) {
     std::cout << "El perimetro del triangulo es " << perimetro << "." << std::endl;
     return;
 }
+
+bool esTriangulo(Triangulo triangulo) {
+    double ladoAB, ladoBC, ladoAC;
+
+    ladoAB = distanciaEntre2Puntos(triangulo.verticeA, triangulo.verticeB);
+    ladoBC = distanciaEntre2Puntos(triangulo.verticeB, triangulo.verticeC);
+    ladoAC = distanciaEntre2Puntos(triangulo.verticeA, triangulo.verticeC);
+
+    if((ladoAB + ladoBC > ladoAC) && (ladoBC + ladoAC > ladoAB) && (ladoAC + ladoAB > ladoBC))
+        return 1;
+    else
+        return 0;
+
+}
