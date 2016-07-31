@@ -1,7 +1,7 @@
 #include "HeaderRectangulo.h"
 #include <iostream>
 
-
+//Función que crea un nuevo cuadrado a partir de dos vértices opuestos del mismo.
 Rectangulo nuevoRectangulo() {
     Rectangulo nuevo;
 
@@ -16,6 +16,8 @@ Rectangulo nuevoRectangulo() {
 
     return nuevo;
 }
+
+//Función que calcula el lado paralelo al eje x de un rectangulo.
 double calcularLadoHorizontalRectangulo(Rectangulo rectangulo) {
     struct Punto verticeDerechoSuperior;
 
@@ -26,6 +28,7 @@ double calcularLadoHorizontalRectangulo(Rectangulo rectangulo) {
 
 }
 
+//Función que calcula el lado paralelo al eje y de un rectangulo.
 double calcularLadoVerticalRectangulo(Rectangulo rectangulo) {
     struct Punto verticeDerechoSuperior;
 
@@ -35,19 +38,23 @@ double calcularLadoVerticalRectangulo(Rectangulo rectangulo) {
     return distanciaEntre2Puntos(rectangulo.verticeDerechoInferior, verticeDerechoSuperior);
 }
 
+//Función que calcula el area de un rectangulo.
 double areaRectangulo(Rectangulo rectangulo) {
     return calcularLadoHorizontalRectangulo(rectangulo) * calcularLadoVerticalRectangulo(rectangulo);
 }
 
+//Función que calcula el perimetro de un rectangulo.
 double perimetroRectangulo(Rectangulo rectangulo) {
     return 2*calcularLadoHorizontalRectangulo(rectangulo) + 2*calcularLadoVerticalRectangulo(rectangulo);
 }
 
+//Función que imprime en pantalla el perímetro de un círculo.
 void imprimirAreaRectangulo(double area) {
     std::cout << "El area del rectangulo es " << area << "." << std::endl;
     return;
 }
 
+//Función que imprime en pantalla el perímetro de un círculo.
 void imprimirPerimetroRectangulo(double perimetro) {
     std::cout << "El perimetro del rectangulo es " << perimetro << "." << std::endl;
     return;

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 
+//Funcion que crea un nuevo triangulo a partir de los vertices del mismo.
 Triangulo nuevoTriangulo(){
   Triangulo nuevo;
   std::cout << "\nIngrese 3 puntos para formar un triangulo:\nPunto 1.x : "; std::cin >> nuevo.verticeA.x;
@@ -20,6 +21,7 @@ double perimetroTriangulo(struct Triangulo triangulo){
 		distanciaEntre2Puntos(triangulo.verticeB, triangulo.verticeC);
 }
 
+//Función que calcula el area de un triangulo.
 double areaTriangulo(struct Triangulo triangulo) {
     double semiperimetro, ladoAB, ladoBC, ladoAC;
 
@@ -31,16 +33,19 @@ double areaTriangulo(struct Triangulo triangulo) {
     return sqrt(semiperimetro*(semiperimetro-ladoAB)*(semiperimetro-ladoBC)*(semiperimetro-ladoAC));//Fórmula de Herón
 }
 
+//Función que imprime en pantalla el area de un triangulo.
 void imprimirAreaTriangulo(double area) {
     std::cout << "El area del triangulo es " << area << "." << std::endl;
     return;
 }
 
+//Función que imprime en pantalla el perímetro de un triangulo.
 void imprimirPerimetroTriangulo(double perimetro) {
     std::cout << "El perimetro del triangulo es " << perimetro << "." << std::endl;
     return;
 }
 
+//Funcion que devuelve 1 si determinados lados conforman un triangulo, caso contrario devuelve 0
 bool esTriangulo(Triangulo triangulo) {
     double ladoAB, ladoBC, ladoAC;
 
